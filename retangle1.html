@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1000px" height="760px" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+    let Rectangle = function (length, width){
+        this.length = length;
+        this.width = width;
+        this.getLength = function (){
+            return this.length;
+        }
+        this.getWidth = function (){
+            return this.width;
+        }
+        this.setLength = function (length){
+            this.length = length;
+        }
+        this.setWidth = function (width){
+            this.width = width;
+        }
+        this.getArea = function (){
+            return this.length*this.width;
+        }
+        this.getChuvi = function (){
+            return (this.length+this.width)*2;
+        }
+        let scarn = document.getElementById("myCanvas").getContext("2d");
+        scarn.beginPath;
+        scarn.rect(100,100,this.length,this.width);
+        scarn.stroke();
+    };
+    let rectangle = new Rectangle(700, 200);
+    let area = rectangle.getArea();
+    let Chuvi = rectangle.getChuvi();
+    document.write('Dien tich hinh chu nhat la = ' + area + '<br>'+  'Chu vi hinh chu nhat la = ' + Chuvi);
+
+</script>
+
+</body>
+</html>
